@@ -1,0 +1,16 @@
+ALGO: AES-256-CBC
+NOTE: Пример сгенерированного ключа и шифртекста. Не храните реальные ключи в публичных репозиториях.
+
+KEY (base64):
+ sGd9K2s4bHh6cW5rV2x4Y3JzZXF0aW9uMTIzNDU2Nzg=
+
+IV (base64):
+ w4h2aFZxN1JkTzA1S2M9PQ==
+
+CIPHERTEXT (base64):
+ U2FtcGxlQ2lwaGVydGV4dCBleGFtcGxlIGZvciBzaGluZmluZy4uLg==
+
+# Примечание
+# - KEY — 32 байта (AES-256), закодированные в base64.
+# - IV — 16 байт, закодированные в base64.
+# - Для декодирования и расшифровки: декодируйте base64 в двоичный файл, затем используйте openssl с ключом и IV (пример команд может зависеть от формата ключа).
