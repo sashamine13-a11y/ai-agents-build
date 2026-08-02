@@ -1,16 +1,19 @@
-ALGO: AES-256-CBC
-NOTE: Пример сгенерированного ключа и шифртекста. Не храните реальные ключи в публичных репозиториях.
+ALGO: classic McEliece6960119
+NOTE: Пример сгенерированного ключа и шифртекста для схемы кодовой криптосистемы classic McEliece-6960119. Это примерные значения — не используйте их для реальной защиты.
 
-KEY (base64):
- sGd9K2s4bHh6cW5rV2x4Y3JzZXF0aW9uMTIzNDU2Nzg=
+PUBLIC_KEY (base64):
+ MjM0NDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAx
+ MjM0NDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NQ==
 
-IV (base64):
- w4h2aFZxN1JkTzA1S2M9PQ==
+PRIVATE_KEY (base64):
+ QkFTRTY0X1BSTkNLRVlfRVhBTVBMRToxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4
+ OTAxMjM0NTY3ODkwMTIzNDU2Nw==
 
 CIPHERTEXT (base64):
- U2FtcGxlQ2lwaGVydGV4dCBleGFtcGxlIGZvciBzaGluZmluZy4uLg==
+ TUNFbGllY2VfY2lwaGVydGV4dF9leGFtcGxlX2Zvcl9tY2VsbGllY2UuLi4=
 
-# Примечание
-# - KEY — 32 байта (AES-256), закодированные в base64.
-# - IV — 16 байт, закодированные в base64.
-# - Для декодирования и расшифровки: декодируйте base64 в двоичный файл, затем используйте openssl с ключом и IV (пример команд может зависеть от формата ключа).
+# Примечание по использованию
+# - classic McEliece-6960119 — это схема с открытым ключом из семейства кодовых криптосистем (NIST PQC).
+# - Размеры ключей у McEliece могут быть очень большими; публичный ключ — сотни килобайт.
+# - Для реальной генерации ключей используйте надёжную реализацию (например, reference implementation от PQClean/Open Quantum Safe) и безопасно храните приватный ключ вне git.
+# - Для расшифровки: декодируйте base64 для приватного ключа и шифртекста, затем используйте совместимую библиотеку/утилиту для McEliece-6960119.
